@@ -1,0 +1,187 @@
+@use '/src/styles/pallette' as *;
+
+.fourth-slide {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 48rem;
+  background: $color__bg--yellow;
+  overflow: hidden;
+
+  &__container {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 4rem 4rem;
+  }
+  &__top {
+    display: flex;
+    width: 100%;
+    margin: 0 0 2.5rem 0;
+    justify-content: space-between;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__stars {
+    display: flex;
+    margin: 0 0 0 1rem;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 1.2rem;
+    }
+
+    &--review {
+      margin: 0 0 0 0.5rem;
+
+      img {
+        height: 0.85rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin: 0 0 0.5rem 0;
+  }
+  &__subtitle {
+    font-size: 0.9rem;
+  }
+
+  &__background {
+    position: absolute;
+    display: flex;
+    padding: 0 0 2rem 0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  &__char {
+    font-size: 15rem;
+    margin: 0 0 0 0.5rem;
+  }
+
+  &__reviews {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: space-evenly;
+  }
+  &__review {
+    height: max-content;
+    padding: 3.6rem;
+    background: #ffffff;
+
+    &--left {
+      align-self: flex-end;
+      width: 38.25%;
+      margin: 0 0 0 4rem;
+      border-radius: 35px 35px 0 35px;
+    }
+    &--right {
+      width: 45%;
+      border-radius: 35px 35px 35px 0;
+    }
+  }
+
+  &__rew-title {
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+  }
+  &__content {
+    font-size: 0.78rem;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.5;
+
+    .fourth-slide__review--left > & {
+      width: 23.9rem;
+    }
+  }
+  &__rew-bot {
+    display: flex;
+    align-items: center;
+    opacity: 0.45;
+  }
+  &__location {
+    font-size: 0.78rem;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px),
+    screen and (min-width: 481px) and (max-width: 768px),
+    screen and (min-width: 769px) and (max-width: 1024px) {
+    height: max-content;
+
+    &__background {
+      top: -23rem;
+    }
+    &__top {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &__left {
+      align-items: center;
+      margin: 0 0 1.25rem 0;
+    }
+    &__title {
+      font-size: 4rem;
+      margin: 2rem 0 1.25rem 0;
+    }
+    &__subtitle {
+      font-size: 2rem;
+    }
+    &__stars {
+      img {
+        height: 2rem;
+      }
+    }
+    &__reviews {
+      flex-direction: column;
+    }
+    &__review {
+      width: 100%;
+      padding: 6rem;
+
+      &--left {
+        width: 100%;
+        margin: 6rem 0 3rem 0;
+        border-radius: 35px 35px 35px 0;
+      }
+      &--right {
+        width: 100%;
+        border-radius: 35px 35px 35px 0;
+      }
+    }
+
+    &__rew-title {
+      font-size: 3.75rem;
+      margin: 0 0 2rem 0;
+    }
+    &__content {
+      font-size: 1.8rem;
+      margin: 0 0 2rem 0;
+    }
+    &__rew-bot {
+      display: flex;
+      align-items: center;
+      opacity: 0.45;
+    }
+    &__location {
+      font-size: 1.8rem;
+    }
+  }
+}

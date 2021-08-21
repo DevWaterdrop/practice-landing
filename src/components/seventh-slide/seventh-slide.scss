@@ -1,0 +1,236 @@
+@use '/src/styles/pallette' as *;
+
+.seventh-slide {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 55rem;
+  background: #ffffff;
+
+  &__left {
+    display: flex;
+    width: 50%;
+    padding: 2rem 4rem;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  &__right {
+    display: flex;
+    width: 50%;
+  }
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  &__face {
+    height: 110%;
+    width: 110%;
+    object-fit: cover;
+  }
+
+  &__l-container {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+  }
+  &__title {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  &__content {
+    font-size: 2rem;
+    width: 67%;
+  }
+  &__bl {
+    position: absolute;
+    bottom: 2rem;
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    width: 3rem;
+    margin: 1.5rem 0 0 0;
+    align-items: center;
+    cursor: pointer;
+
+    div:first-child {
+      display: flex;
+      align-items: center;
+      width: 3rem;
+      height: 1.5rem;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  &__sheep {
+    width: 12rem;
+    height: 5rem;
+  }
+  &__question {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    left: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    background: $color__bg--pink;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 300%;
+      height: 400%;
+    }
+  }
+  &__bubble {
+    position: absolute;
+    width: 18rem;
+    padding: 2.5rem 2.5rem 3rem 2.5rem;
+    left: 5rem;
+    bottom: 7rem;
+    color: initial;
+    background: $color__bg--pink;
+    opacity: 0;
+    border-radius: 1.875rem 1.875rem 1.875rem 0;
+    font-size: 0.91rem;
+    line-height: 1.5;
+  }
+
+  &__badge {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    left: calc(50% - 5rem);
+    bottom: 20%;
+    padding: 0.5rem 0.8rem;
+    background-color: $color__badge--pink;
+    border-radius: 15px;
+  }
+  &__top {
+    display: flex;
+    height: 60%;
+  }
+  &__bottom {
+    display: flex;
+    height: 40%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $color__text--default;
+
+    p {
+      font-size: 0.55rem;
+    }
+  }
+
+  &__tl {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      line-height: 1;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+  &__tr {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid $color__text--default;
+
+    p {
+      font-size: 0.55rem;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px),
+    screen and (min-width: 481px) and (max-width: 768px),
+    screen and (min-width: 769px) and (max-width: 1024px) {
+    height: max-content;
+    flex-direction: column;
+
+    &__left {
+      width: 100%;
+      margin: 0 0 15rem 0;
+    }
+    &__right {
+      width: 100%;
+      overflow: hidden;
+    }
+    &__title {
+      font-size: 2.75rem;
+      margin: 3rem 0 4rem 0;
+    }
+    &__content {
+      font-size: 4.5rem;
+      width: 96%;
+      margin: 0 0 4rem 0;
+    }
+    &__container {
+      position: relative;
+      height: 70rem;
+    }
+    &__face {
+      position: absolute;
+      height: 150%;
+      width: 150%;
+      bottom: -25%;
+      left: -25%;
+      object-fit: cover;
+      border: 1px solid red;
+    }
+    &__button {
+      position: relative;
+      width: 8rem;
+
+      div:first-child {
+        width: 8rem;
+        height: 4rem;
+
+        img {
+          width: 50%;
+        }
+      }
+    }
+    &__badge {
+      height: 22rem;
+      width: 22rem;
+      padding: 0.75rem 2rem;
+      left: calc(50% - 11rem);
+      bottom: calc(50% - 13rem);
+      border-radius: 2rem;
+    }
+    &__bottom {
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &__tl {
+      p {
+        font-size: 3.5rem;
+      }
+    }
+    &__tr {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

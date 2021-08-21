@@ -1,0 +1,34 @@
+.product {
+  height: 33rem;
+  box-shadow: 20px 30px 40px 30px rgba($color: #000000, $alpha: 0.15);
+
+  &--default {
+    width: 16.375rem;
+  }
+  &--smaller {
+    height: 30rem;
+    width: 14.875rem;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    height: 55rem;
+
+    &--default {
+      width: 27.3125rem;
+    }
+    &--smaller {
+      width: 27rem;
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 768px),
+    screen and (min-width: 769px) and (max-width: 1024px) {
+    height: 54.5rem;
+
+    &--default {
+      width: 27.6875rem;
+    }
+    &--smaller {
+      width: 27rem;
+    }
+  }
+}
