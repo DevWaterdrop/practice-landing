@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: 'https://devwaterdrop.github.io/practice-landing/'
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
