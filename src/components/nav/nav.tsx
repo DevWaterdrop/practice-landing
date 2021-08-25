@@ -67,22 +67,19 @@ const Nav: React.VFC<IProps> = (props) => {
       transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
     >
       <div className={sc('left')}>
-        <a className={sc('link')} href="/">
-          Fall Asleep
-        </a>
-        <a className={sc('link')} href="/">
-          Stay Asleep
-        </a>
-        <a className={sc('link')} href="/">
-          Sleep set
-        </a>
-        <a className={sc('link')} href="/">
-          FAQ
-        </a>
+        <span className={sc('link')}>Fall Asleep</span>
+        <span className={sc('link')}>Stay Asleep</span>
+        <span className={sc('link')}>Sleep set</span>
+        <span className={sc('link')}>FAQ</span>
       </div>
       <p className={sc('title')}>Sandland</p>
       <div className={sc('right')}>
-        <a className={sc('link')} href="/">
+        <a
+          className={sc('link')}
+          href="https://github.com/DevWaterdrop"
+          target="_blank"
+          rel="noreferrer"
+        >
           Github
         </a>
       </div>

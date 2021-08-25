@@ -48,6 +48,7 @@
     text-decoration: none;
     color: inherit;
     transition: color 0.5s;
+    cursor: pointer;
     &::selection {
       background-color: transparent;
     }
