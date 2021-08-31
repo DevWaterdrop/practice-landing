@@ -34,7 +34,11 @@ const SecondSlide: React.VFC<IProps> = ({ isMobile }) => {
       }`;
 
     return (
-      <div className={mobileClass('second-slide')}>
+      <div
+        className={`${styles[`second-slide`]} ${
+          styles[`second-slide--mobile`]
+        }`}
+      >
         <div className={mobileClass('container')}>
           <p className={mobileClass('title')}>
             Rediscover restfulness with our natural hemp-derived ingredient
