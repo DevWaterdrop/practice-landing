@@ -29,12 +29,14 @@ const SecondSlide: React.VFC<IProps> = ({ isMobile }) => {
 
   if (isMobile) {
     const mobileClass = (string: string) =>
-      `${styles[string]} ${styles[`${string}--mobile`]}`;
+      `${styles[`second-slide__${string}`]} ${
+        styles[`second-slide__${string}--mobile`]
+      }`;
 
     return (
       <div className={mobileClass('second-slide')}>
-        <div className={mobileClass(sc('container'))}>
-          <p className={mobileClass(sc('title'))}>
+        <div className={mobileClass('container')}>
+          <p className={mobileClass('title')}>
             Rediscover restfulness with our natural hemp-derived ingredient
             that’s proven to aid with sleep. No high, just clean, healthy sleep.
           </p>
@@ -46,28 +48,28 @@ const SecondSlide: React.VFC<IProps> = ({ isMobile }) => {
           >
             <m.p
               variants={secondSlideVariants.text(0)}
-              className={mobileClass(sc('item'))}
+              className={mobileClass('item')}
             >
               <Plus manualStagger={0} />
               Start getting 8hrs of sleep regularly
             </m.p>
             <m.p
               variants={secondSlideVariants.text(0.25)}
-              className={mobileClass(sc('item'))}
+              className={mobileClass('item')}
             >
               <Plus manualStagger={0.25} />
               No groggy feeling in the morning
             </m.p>
             <m.p
               variants={secondSlideVariants.text(0.4)}
-              className={mobileClass(sc('item'))}
+              className={mobileClass('item')}
             >
               <Plus manualStagger={0.4} />
               Wake up refreshed and ready for the day
             </m.p>
           </m.div>
           <div
-            className={mobileClass(sc('button'))}
+            className={mobileClass('button')}
             onMouseOver={() => buttonControls.start('hovered')}
             onMouseOut={() => buttonControls.start('initial')}
             onFocus={() => buttonControls.start('hovered')}
